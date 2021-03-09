@@ -5,6 +5,8 @@
  */
 package boardgame;
 
+import BoardGrid.BoardGrid;
+
 /**
  * A simple Snakes and Ladders game
  * 
@@ -21,6 +23,8 @@ package boardgame;
  * REMINDER - The BOTTOM of a ladder MUST be BELOW the TOP
  * ALSO the HEAD of a snake must be ABOVE the TAIL
  * 
+ * You cannot have a ladder AND a snake on the same square
+ * 
  * @author Ken
  */
 public class BoardGame {
@@ -30,10 +34,13 @@ public class BoardGame {
      */
     public static void main(String[] args) {
         
-        Dice myDice = new Dice(6);  //cretae a 6-sided dice to play this game
+        Dice myDice = new Dice(6);  //create a 6-sided dice to play this game
         
+        BoardGrid SLGame = new BoardGrid(10);
         
-                
+        /// ********* TESTING ************* //
+        SLGame.drawBoard();
+        //////////////////////////////////////        
     }
     
 }
