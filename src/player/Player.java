@@ -3,7 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package boardgame;
+package player;
+
+import boardgame.Dice;
+
+
 
 /**
  * A simple Player for a game
@@ -11,7 +15,8 @@ package boardgame;
  * @author Ken
  */
 public class Player {
-    
+   
+   // PROPERTIES// 
    private String name;
    private int boardPosition;
    
@@ -19,13 +24,25 @@ public class Player {
    
    private double gameScore;
    
-   
+   //CONSTRUCTORS//
    public Player(String name){
        
        this.name = name;
        this.boardPosition = 0;
        this.turnCounter = 0;
+       this.gameScore = 0;      //assumes you always start with a score of 0
    }
+   
+   public Player(String name, double startingScore){
+       
+       this.name = name;
+       this.boardPosition = 0;
+       this.turnCounter = 0;
+       this.gameScore = startingScore;
+       
+   }
+   
+   //METHODS//
    
    /**
     *  The Player takes a turn by rolling the dice s/he is given and returning the number rolled
